@@ -1,0 +1,53 @@
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-4 mt-5">
+            <div class="card border-0 shadow p-3">
+                <div class="form-floating mb-3 tetx-center">
+                    <h5 class="text-center text-warning">Thêm Nhân viên</h5>
+                </div>
+                    <div class="form-floating mb-4">
+                        <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="fullname">
+                        <label for="lastName">Họ và tên</label>
+                    </div>
+                    <div class="form-floating mb-4">
+                        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email">
+                        <label for="email">Địa chỉ Email </label>
+                    </div>
+                    <div class="form-floating mb-4">
+                        <input type="text" class="form-control" id="mobile" name="mobile" [(ngModel)]="mobile">
+                        <label for="mobile">Số điện thoại</label>
+                    </div>
+                    <button type="button" class="btn btn-outline-success" (click)="addEmployees()">Thêm nhân viên</button>
+            </div>
+        </div>
+        <div class="col-md-8 mt-2">
+            <h5 class="text-danger"> Danh sách nhân viên</h5>
+            <div class="card p-3 shadow">
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Họ và tên</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Số điện thoại</th>
+                            <th scope="col">tác vụ</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let employ of employeesList">
+                            <td>{{employ.fullname}}</td>
+                            <td>{{employ.email}}</td>
+                            <td>{{employ.mobile}}</td>
+                            <td>
+                                <button class="btn btn-outline-danger" (click)="deleteEmployees(employ)">Xóa</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

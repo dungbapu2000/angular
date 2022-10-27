@@ -1,0 +1,49 @@
+<div class="container-fluid">
+    <div class="row mt-5">
+        <div class="col"></div>
+        <div class="col-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <h4 class="text-dark text-muted" style="margin-bottom: 30px;">Đăng Nhập</h4>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label"style="margin-bottom: 10px;">Email</label>
+                          <input type="email" class="form-control" name="email" [(ngModel)]="email">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label"style="margin-bottom: 10px;">Mật Khẩu</label>
+                          <input type="password" class="form-control" name="password" [(ngModel)]="password">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputrole" class="form-label" style="margin-bottom: 10px;">Vị Trí</label>
+                            <select class="form-select" id="floatingSelect" aria-label="Role" name="role" [(ngModel)]="role">
+                              <option *ngFor="let r of roles" [value]="r">{{r}}</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn btn-info" (click)="login()"style="margin-bottom: 10px;">Login</button>
+                        <div class="row"style="margin-bottom: 20px;">
+                            <div class="col-md-6">
+                                <a href="/register" style="text-decoration: none;">Chưa có tài khoản ? <span class="text-danger">Đăng ký</span></a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="/forgot-password" class="text-dark" style="text-decoration: none;"> Quên mật khẩu ? </a>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <a (click)="signInWithGoogle()" style="text-decoration: none;cursor: pointer;">
+                                <div class="card shadow text-center">
+                                    <div class="card-body">
+                                        <img src="../../../assets/icons8-google-48.png" alt="" height="24px" width="24px"> Đăng nhập bằng Google
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
