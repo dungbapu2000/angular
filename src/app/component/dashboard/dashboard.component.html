@@ -1,25 +1,51 @@
 <div class="container-fluid">
-
-    <div class="row">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="/dashboard">Quản lý</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/chat">Chat</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  (click)="register()" style="border: none;">Đăng xuất</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="row" style="margin: 100px;">
         <div class="col-md-4 mt-5">
+            <div class="card border-0 shadow p-3">
+                <div class="form-floating tetx-center">
+                    <h6 class="text-left ">Số nhân viên online: {{count}}</h6>
+                </div>
+                </div>
             <div class="card border-0 shadow p-3">
                 <div class="form-floating mb-3 tetx-center">
                     <h5 class="text-center text-warning">Thêm Nhân viên</h5>
                 </div>
-                    <div class="form-floating mb-4">
-                        <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="fullname">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="fullname" name="fullname" [(ngModel)]="fullname">
                         <label for="lastName">Họ và tên</label>
                     </div>
-                    <div class="form-floating mb-4">
+                    <div class="form-floating mb-3">
                         <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email">
                         <label for="email">Địa chỉ Email </label>
                     </div>
-                    <div class="form-floating mb-4">
-                        <input type="text" class="form-control" id="mobile" name="mobile" [(ngModel)]="mobile">
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="mobile" name="mobile" [(ngModel)]="mobile">
                         <label for="mobile">Số điện thoại</label>
                     </div>
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="photoURL" name="photoURL" [(ngModel)]="photoURL">
+                      <label for="photoURL">Link hình ảnh</label>
+                  </div>
                     <button type="button" class="btn btn-outline-success" (click)="addEmployees()">Thêm nhân viên</button>
-            </div>
+                </div>
         </div>
         <div class="col-md-8 mt-2">
             <h5 class="text-danger"> Danh sách nhân viên</h5>
@@ -31,6 +57,7 @@
                             <th scope="col">Họ và tên</th>
                             <th scope="col">Email</th>
                             <th scope="col">Số điện thoại</th>
+                            <th scope="col">hình ảnh</th>
                             <th scope="col">tác vụ</th>
                           </tr>
                         </thead>
@@ -39,7 +66,9 @@
                             <td>{{employ.fullname}}</td>
                             <td>{{employ.email}}</td>
                             <td>{{employ.mobile}}</td>
+                            <td><img [src]="employ.photoURL" style="width:50px;height: 50px;"></td>
                             <td>
+                                <button class="btn btn-outline-danger" (click)="updateEmployees(employ)">Sửa</button>
                                 <button class="btn btn-outline-danger" (click)="deleteEmployees(employ)">Xóa</button>
                             </td>
                           </tr>

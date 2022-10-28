@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { AngularFireAuth, } from '@angular/fire/compat/auth';
 import { GoogleAuthProvider, GithubAuthProvider, FacebookAuthProvider} from '@angular/fire/auth'
 import { Router } from '@angular/router';
 
@@ -34,7 +34,7 @@ export class AuthService {
   // register method
   register(email : string, password : string) {
     this.fireauth.createUserWithEmailAndPassword(email, password).then( res => {
-      alert('Registration Successful');
+      alert('Đăng ký thành công');
       this.sendEmailForVarification(res.user);
       this.router.navigate(['/login']);
     }, err => {
@@ -42,7 +42,9 @@ export class AuthService {
       this.router.navigate(['/register']);
     })
   }
-
+  couter(){
+    return localStorage.length;
+  }
   // sign out
   logout() {
     this.fireauth.signOut().then( () => {
@@ -83,5 +85,5 @@ export class AuthService {
       alert(err.message);
     })
   }
-
+  currentUser$ = this.fireauth.authState;
 }

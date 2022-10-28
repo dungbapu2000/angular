@@ -10,9 +10,6 @@ import { Employees } from '../model/employees';
 export class DataService {
 
   constructor(private afs : AngularFirestore, private fireStorage : AngularFireStorage) { }
-
-
-
   addEmployees(employees : Employees) {
     employees.id = this.afs.createId();
     return this.afs.collection('/Employees').add(employees);
@@ -25,10 +22,9 @@ export class DataService {
   deleteEmployees(employees : Employees) {
      this.afs.doc('/Employees/'+employees.id).delete();
   }
-
   updateEmployees(employees : Employees) {
     this.deleteEmployees(employees);
     this.addEmployees(employees);
   }
-    
+  
 }
