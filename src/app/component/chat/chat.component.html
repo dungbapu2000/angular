@@ -1,1 +1,160 @@
-<p>chat works!</p>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="/dashboard">Quản lý</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/chat">Chat</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  (click)="register()" style="border: none;">Đăng xuất</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="messaging" style="margin-top: 70px;">
+          <div class="inbox_msg">
+            <div class="inbox_people">
+              <div class="headind_srch">
+                <div class="recent_heading">
+                  <h4>Gần đây</h4>
+                </div>
+                <div class="srch_bar">
+                  <div class="stylish-input-group">
+                    <input type="text" class="search-bar"  placeholder="Tìm kiếm " >
+                    <span class="input-group-addon">
+                    <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
+                    </span> </div>
+                </div>
+              </div>
+              <div class="inbox_chat">
+                <div class="chat_list active_chat">
+                  <div class="chat_people">
+                    <div class="chat_img"> <img src="https://scontent.fsgn5-3.fna.fbcdn.net/v/t39.30808-6/301914133_470390121612182_4163711978193616222_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=AonISckJBbwAX9zuXYz&_nc_ht=scontent.fsgn5-3.fna&oh=00_AfCle7Zk9z4BfVW18WBoHin-Md0toD751diprVYPFz_xMw&oe=636051F8" alt="sunil"> </div>
+                    <div class="chat_ib">
+                      <h5>Dũng <span class="chat_date">27 tháng 10</span></h5>
+                      <p>Alo, alo</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat_list">
+                  <div class="chat_people">
+                    <div class="chat_img"> <img src="https://scontent.fsgn5-2.fna.fbcdn.net/v/t39.30808-6/277569373_1579005012483035_6832062426077248782_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=KAUVENa9pkUAX91zIDR&_nc_ht=scontent.fsgn5-2.fna&oh=00_AfAvmDxryHQcKTFxPG0C_L9CrphYqfxCgY_0ceJd8tw5fg&oe=6361B38F" alt="sunil"> </div>
+                    <div class="chat_ib">
+                      <h5>Huy <span class="chat_date">27 tháng 10</span></h5>
+                      <p>Làm web</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat_list">
+                  <div class="chat_people">
+                    <div class="chat_img"> <img src="https://scontent.fsgn5-13.fna.fbcdn.net/v/t39.30808-6/290914456_548062123641593_1546599215308515189_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=GMA3GozzBvQAX-BI6Iu&_nc_ht=scontent.fsgn5-13.fna&oh=00_AfBnJROz-SNzS-qajv6i98Wz2iG8uNcSfcvYg9QGgDmvOQ&oe=635FD405" alt="sunil"> </div>
+                    <div class="chat_ib">
+                      <h5>Duy <span class="chat_date">25 thắng 10</span></h5>
+                      <p>Đi chơi ko?</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat_list">
+                    <div class="chat_people">
+                      <div class="chat_img"> <img src="https://scontent.fsgn5-13.fna.fbcdn.net/v/t39.30808-6/290914456_548062123641593_1546599215308515189_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=GMA3GozzBvQAX-BI6Iu&_nc_ht=scontent.fsgn5-13.fna&oh=00_AfBnJROz-SNzS-qajv6i98Wz2iG8uNcSfcvYg9QGgDmvOQ&oe=635FD405" alt="sunil"> </div>
+                      <div class="chat_ib">
+                        <h5>Duy <span class="chat_date">25 thắng 10</span></h5>
+                        <p>Đi chơi ko?</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chat_list">
+                    <div class="chat_people">
+                      <div class="chat_img"> <img src="https://scontent.fsgn5-13.fna.fbcdn.net/v/t39.30808-6/290914456_548062123641593_1546599215308515189_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=GMA3GozzBvQAX-BI6Iu&_nc_ht=scontent.fsgn5-13.fna&oh=00_AfBnJROz-SNzS-qajv6i98Wz2iG8uNcSfcvYg9QGgDmvOQ&oe=635FD405" alt="sunil"> </div>
+                      <div class="chat_ib">
+                        <h5>Duy <span class="chat_date">25 thắng 10</span></h5>
+                        <p>Đi chơi ko?</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chat_list">
+                    <div class="chat_people">
+                      <div class="chat_img"> <img src="https://scontent.fsgn5-13.fna.fbcdn.net/v/t39.30808-6/290914456_548062123641593_1546599215308515189_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=GMA3GozzBvQAX-BI6Iu&_nc_ht=scontent.fsgn5-13.fna&oh=00_AfBnJROz-SNzS-qajv6i98Wz2iG8uNcSfcvYg9QGgDmvOQ&oe=635FD405" alt="sunil"> </div>
+                      <div class="chat_ib">
+                        <h5>Duy <span class="chat_date">25 thắng 10</span></h5>
+                        <p>Đi chơi ko?</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chat_list">
+                    <div class="chat_people">
+                      <div class="chat_img"> <img src="https://scontent.fsgn5-13.fna.fbcdn.net/v/t39.30808-6/290914456_548062123641593_1546599215308515189_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=GMA3GozzBvQAX-BI6Iu&_nc_ht=scontent.fsgn5-13.fna&oh=00_AfBnJROz-SNzS-qajv6i98Wz2iG8uNcSfcvYg9QGgDmvOQ&oe=635FD405" alt="sunil"> </div>
+                      <div class="chat_ib">
+                        <h5>Duy <span class="chat_date">25 thắng 10</span></h5>
+                        <p>Đi chơi ko?</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chat_list">
+                    <div class="chat_people">
+                      <div class="chat_img"> <img src="https://scontent.fsgn5-13.fna.fbcdn.net/v/t39.30808-6/290914456_548062123641593_1546599215308515189_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=GMA3GozzBvQAX-BI6Iu&_nc_ht=scontent.fsgn5-13.fna&oh=00_AfBnJROz-SNzS-qajv6i98Wz2iG8uNcSfcvYg9QGgDmvOQ&oe=635FD405" alt="sunil"> </div>
+                      <div class="chat_ib">
+                        <h5>Duy <span class="chat_date">25 thắng 10</span></h5>
+                        <p>Đi chơi ko?</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="mesgs">
+              <div class="msg_history">
+                <div class="incoming_msg">
+                  <div class="incoming_msg_img"> <img src="https://scontent.fsgn5-3.fna.fbcdn.net/v/t39.30808-6/301914133_470390121612182_4163711978193616222_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=AonISckJBbwAX9zuXYz&_nc_ht=scontent.fsgn5-3.fna&oh=00_AfCle7Zk9z4BfVW18WBoHin-Md0toD751diprVYPFz_xMw&oe=636051F8" alt="sunil"> </div>
+                  <div class="received_msg">
+                    <div class="received_withd_msg">
+                      <p>Làm angular</p>
+                      <span class="time_date"> 11:01 AM    |    25 thắng 10</span></div>
+                  </div>
+                </div>
+                <div class="outgoing_msg">
+                  <div class="sent_msg">
+                    <p>Làm đi</p>
+                    <span class="time_date"> 11:02 AM    |    25 thắng 10</span> </div>
+                </div>
+                <div class="incoming_msg">
+                    <div class="incoming_msg_img"> <img src="https://scontent.fsgn5-3.fna.fbcdn.net/v/t39.30808-6/301914133_470390121612182_4163711978193616222_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=AonISckJBbwAX9zuXYz&_nc_ht=scontent.fsgn5-3.fna&oh=00_AfCle7Zk9z4BfVW18WBoHin-Md0toD751diprVYPFz_xMw&oe=636051F8" alt="sunil"> </div>
+                    <div class="received_msg">
+                      <div class="received_withd_msg">
+                        <p>Làm angular</p>
+                        <span class="time_date"> 11:03 AM    |    25 thắng 10</span></div>
+                    </div>
+                  </div>
+                  <div class="outgoing_msg">
+                    <div class="sent_msg">
+                      <p>Làm đi</p>
+                      <span class="time_date"> 11:04 AM    |    25 thắng 10</span> </div>
+                  </div>
+                  <div class="incoming_msg">
+                    <div class="incoming_msg_img"> <img src="https://scontent.fsgn5-3.fna.fbcdn.net/v/t39.30808-6/301914133_470390121612182_4163711978193616222_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=AonISckJBbwAX9zuXYz&_nc_ht=scontent.fsgn5-3.fna&oh=00_AfCle7Zk9z4BfVW18WBoHin-Md0toD751diprVYPFz_xMw&oe=636051F8" alt="sunil"> </div>
+                    <div class="received_msg">
+                      <div class="received_withd_msg">
+                        <p>Làm angular</p>
+                        <span class="time_date"> 11:05 AM    |    25 thắng 10</span></div>
+                    </div>
+                  </div>
+                  <div class="outgoing_msg">
+                    <div class="sent_msg">
+                      <p>Làm đi</p>
+                      <span class="time_date"> 11:06 AM    |    25 thắng 10</span> </div>
+                  </div>
+              </div>
+              <div class="type_msg">
+                <div class="input_msg_write">
+                  <input type="text" class="write_msg" placeholder="Nhập tin nhắn" />
+                  <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div></div>

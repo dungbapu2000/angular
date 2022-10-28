@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AuthService } from 'src/app/shared/auth.service';
 @Component({
   selector: 'app-chat',
   templateUrl: './chat.component.html',
@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatComponent implements OnInit {
 
-  constructor() { }
+  constructor(private auth: AuthService) { }
 
   ngOnInit(): void {
   }
-
+  register() {
+    this.auth.logout();
+  }
 }
